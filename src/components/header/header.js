@@ -4,10 +4,12 @@ import  './header.css';
 export default class Header extends Component {
 render(){
     return (
-        <header>
-            <img alt = "" className = 'logo' src = 'https://images.unsplash.com/photo-1559656428-6f31733e0937?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80' >
+        <header className= 'header'>
+            <img alt = "" className = 'logo' src = 'https://images.unsplash.com/photo-1468070454955-c5b6932bd08d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60' >
              </img>
-            <p>BLOG NAME</p>
+          <div className = 'title-box'>
+            <p className= 'main-title' >CODING IS COOL</p>
+          </div>  
         </header>
     )
 }

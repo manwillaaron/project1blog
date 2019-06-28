@@ -1,4 +1,29 @@
+.header {
+    height: 30vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 10vh;
+    align-items: center;
+    background-color: black;
+    
+}
+
+.title-box {
+    width:100vw;
+    display: flex;
+    color: white;
+    justify-content: space-evenly;
+    font-weight: bold;
+    font-family: "Courier New", Courier, monospace;
+    position: relative;
+    right:4%;
+}
+
 .logo{
-    width: 100px;
-    height: 100px;
+    width: auto;
+    height: 25vh;
+    position: relative;
+    left: 3vw;  
+    
 }

@@ -29,6 +29,8 @@ class App extends Component{
     this.setState({[name]: value})
   }
 
+ 
+
   createPost = (titleInput, imageInput, contentInput) => {
     // console.log('hit2');
     axios
@@ -40,8 +42,10 @@ class App extends Component{
      .then( res => { 
         this.setState({arrOfPosts: res.data})
         // console.log(this.state.arrOfPosts);
+       
      })
      .catch(err => console.log('err', err))
+     
   }
 
   deletePost = id => {
@@ -63,14 +67,31 @@ class App extends Component{
       .catch(err => console.log('not able to delete', err))
   }
 
+  searchPosts = (title ,content) => {
+    
+    axios
+      .get(`/api/search?title=${title}`)
+      .then(data => {
+        this.setState({arrOfPosts: data.data})
+      })
+      .catch(err => console.log('not able to search', err))
+      console.log(this.state.arrOfPosts);
+  }
+  
+
   render() {
     return (
-      <div className="App">
+    <div className="App">
         <Header/>
         <Inputs
-          createPost = {this.createPost}
-          
+          createPost = {this.createPost}  
+          searchPosts= {this.searchPosts}
+          resetInputs= {this.resetInputs}
         />
+        
+        <div className='posts-box'>
+       
+        <div className='posts'>
         {this.state.arrOfPosts.map( post => {
           return(
             <Posts 
@@ -81,11 +102,15 @@ class App extends Component{
               editPost = {this.editPost}
             
             />
+            
           );
         })
         }
+        </div>
         
-      </div>
+        </div>    
+        
+    </div>
     );
   } 
 }

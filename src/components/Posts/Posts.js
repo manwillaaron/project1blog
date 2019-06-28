@@ -35,31 +35,40 @@ class posts extends Component{
     let {post} = this.props
     let {editing,title,image,content} = this.state
     return (
-      <div className="App">
-        <p>{post.title}</p>
-        <img src={post.image} className="post-image" alt= "" />
-        <p>{post.content}</p>
+      
+      <div className='flex-container'>
+            
+              <p className= 'title'>{post.title}</p>
+          <div className= 'image-content'>    
+              <img src={post.image} className="post-image" alt= "" />
+              <p className='content'>{post.content}</p>
+          </div>    
+        
+
         {editing ? (
-          <input value={title} onChange={this.handleChange} name="title" />
+          <textarea value={title} onChange={this.handleChange} name="title" />
         ) : (
           null
         )}
          {editing ? (
-          <input value={image} onChange={this.handleChange} name="image" />
+          <textarea value={image} onChange={this.handleChange} name="image" />
         ) : (
           null
         )}
          {editing ? (
-          <input value={content} onChange={this.handleChange} name="content" />
+          <textarea value={content} onChange={this.handleChange} name="content" />
         ) : (
           null
         )}
+      <div className='buttons'>  
         {editing ? (
-          <button onClick={this.SaveEditing}>Save Changes</button>
+          <button className='button' onClick={this.SaveEditing}>Save Changes</button>
         ) : (
-          <button onClick={this.flipEditing}>Edit</button>
+          <button className='button' onClick={this.flipEditing}>Edit</button>
         )}
-        <button onClick = {() => this.props.deletePost(this.props.id)}>delete</button>
+        <button className='button' onClick = {() => this.props.deletePost(this.props.id)}>delete</button>
+        
+     </div>      
       </div>
     );
   } 

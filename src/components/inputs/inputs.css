@@ -1,0 +1,140 @@
+.inputs-box{
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background: lightgray;
+    
+    
+}
+
+.title-image{
+    height:20%;
+    width: 70vw;
+    display:flex;
+    justify-content: center;
+    
+    /* justify-content: flex-start */
+}
+
+.content-input{
+    
+    width:100%;
+    height: 20vh;
+    word-wrap: break-word;
+    word-break: break-all;
+    font-family: "Courier New", Courier, monospace;
+    display:flex;
+    
+}
+
+textarea.box1{
+width:60%;
+font-family: "Courier New", Courier, monospace;
+font-size: 30px;
+
+
+}
+
+textarea.box2{
+    width:40%;
+    font-family: "Courier New", Courier, monospace;
+    
+    }
+
+.post-button{
+    width:40%;
+    height: 40%;
+    display:flex;
+    
+    font-family: "Courier New", Courier, monospace;
+    justify-content: space-evenly;
+    border-radius: 30%;
+    background: rgb(197, 238, 197);
+    font-size: 100%;
+
+
+}
+
+.reset-button{
+    width:40%;
+    height: 40%;
+    display:flex;
+    
+    font-family: "Courier New", Courier, monospace;
+    justify-content: space-evenly;
+    border-radius: 30%;
+    background: rgb(197, 238, 197);
+    font-size: 100%;
+
+}
+
+.post-reset{
+    width:20vw;
+    height: 100;
+    position: relative;
+    left:8vw;
+    top: 1vh;
+    /* display:flex; */
+    font-family: "Courier New", Courier, monospace;
+    /* justify-content: space-evenly; */
+    flex-direction: column;
+    
+
+}
+
+.button-container{
+    height: 3%;
+    position: absolute;
+    right: 5vw;
+    top: 50vh;
+    border-radius: 15%;
+  
+    
+    
+
+}
+
+.content-input-box{
+    width: 90%;
+    height: 22vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-post{
+    width: 70vw;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    
+
+}
+
+/* textarea.box1 {
+	width: 600px;
+	height: 120px;
+	border: 3px solid #cccccc;
+	padding: 5px;
+	font-family: Tahoma, sans-serif;
+	background-position: bottom right;
+	background-repeat: no-repeat;
+} */
+
+.search-box{
+    height: 100%;
+    width: 10vw;
+    position: absolute;
+    top: 23vh;
+    right:1%;
+    border-radius: 15%;
+    background: rgb(197, 238, 197);
+    border: none;
+
+
+  
+  
+  }
