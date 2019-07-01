@@ -36,6 +36,9 @@ export default class Inputs extends Component {
     
     }
 
+    setScrollbarTop(){
+        window.scrollTo(0,0)
+    }
         
       
 
@@ -44,9 +47,13 @@ render(){
 
     return (
         <div className='inputs-box'>
+            <link href="https://fonts.googleapis.com/css?family=Julius+Sans+One&display=swap" rel="stylesheet"></link>
             <div className = 'title-image'>
                  <textarea className = 'box1' type = 'textarea' value={this.state.titleInput} onChange = {this.handleChange} placeholder='Title' name='titleInput'></textarea>
                  <textarea className = 'box2' value = {this.state.imageInput} onChange = {this.handleChange} placeholder = 'Image' name = 'imageInput' ></textarea>
+                <div className='top-stickybox'>
+                    <button onClick= {() => this.setScrollbarTop()} className='top'>Top</button>
+                </div>
             </div>
             <div className = 'content-post'>   
                 <div className = 'content-input-box'>
@@ -76,7 +83,7 @@ render(){
                   
                   <button className='reset-button' 
                  onClick= {() => this.resetInputs( titleInput, imageInput, contentInput)}
-                 >reset</button>
+                 >Clear</button>
                   
             </div>
             <div>

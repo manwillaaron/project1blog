@@ -1,29 +1,55 @@
+
+
+
+
+.sticky-box{
+    height: 60vh;
+    width:100%;
+    
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    background-color:  rgb(207, 195, 195);
+}
+
+
+
 .header {
-    height: 30vh;
+    height: 40vh;
     width: 100%;
     display: flex;
     justify-content: space-between;
-    font-size: 10vh;
     align-items: center;
-    background-color: black;
+    background-color: rgb(100, 90, 73);
+    position:sticky;
+    top: 0rem;
     
 }
 
 .title-box {
     width:100vw;
     display: flex;
-    color: white;
     justify-content: space-evenly;
-    font-weight: bold;
-    font-family: "Courier New", Courier, monospace;
-    position: relative;
+    
+   
+    position:sticky;
+    bottom:  0rem;
+    
     right:4%;
+}
+
+.main-title{
+    color:white;
+    font-family: 'Julius Sans One', sans-serif;
+    font-stretch: narrower;
+    font-size:10vh
 }
 
 .logo{
     width: auto;
-    height: 25vh;
+    height: 30vh;
     position: relative;
-    left: 3vw;  
+    left: 3vw;
+    border-radius: 10%;  
     
 }

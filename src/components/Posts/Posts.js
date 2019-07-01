@@ -37,12 +37,25 @@ class posts extends Component{
     return (
       
       <div className='flex-container'>
+        <link href="https://fonts.googleapis.com/css?family=Julius+Sans+One&display=swap" rel="stylesheet"></link>
             
               <p className= 'title'>{post.title}</p>
-          <div className= 'image-content'>    
+        <div className= 'image-content'>  
+            
+            <div className='image-container'>
+            
               <img src={post.image} className="post-image" alt= "" />
-              <p className='content'>{post.content}</p>
-          </div>    
+              
+            </div>  
+
+            
+          <div className= 'content-postbtn'>
+            <p className='content'>{post.content}</p>
+              
+          </div>
+              
+        </div>    
+        
         
 
         {editing ? (

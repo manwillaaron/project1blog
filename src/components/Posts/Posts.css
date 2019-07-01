@@ -2,14 +2,35 @@
 
 .post-image {
     max-width: 30vw;
-    max-height: 30vh;
-    margin: 1%;
+    max-height: 45vh;
+    margin: 1vw;
+    position: sticky;
+    top:5rem;
+    border-radius: 10%
+}
+.top {
+    
+    
+    position: sticky;
+    top:41.9rem;
+    margin-right: 10%;
+    width:4vw;
+    background: rgb(218, 236, 218);
+    border-radius: 25%;
+    font-size:100%;
+
 }
 
+
 .title{
-    font-size: 30px;
-    font-family: "Courier New", Courier, monospace;
+    width:80%;
+    font-size: 8vh;
+    font-family: 'Julius Sans One', sans-serif;
     font-weight: bold;
+    position: relative;
+    left: 25%;
+
+    
 }
 
 .flex-container{
@@ -19,11 +40,12 @@
     flex-direction: column;
     /* border:groove; */
     background-image: radial-gradient(circle at 10px 15px, white 12px, transparent 13px);
-
+    justify-content: flex-start;
     border-style: dotted dashed solid double;
     border-width: 0.5px 0px 0px 0px;
     border-color: black;
-    background: lightgray;
+    background: rgb(207, 195, 195);
+    font-family: 'Julius Sans One', sans-serif;
    
 }
 
@@ -37,11 +59,44 @@
 
 } */
 
+.image-container{
+    display:flex;
+    flex-direction: column;
+   
+    width: 30vw;
+    height: auto 100%;
+   
+}
+.top-stickybox{
+    display:flex;
+    flex-direction: column;
+    width: 2vw;
+    height: auto 100%;
+    width:2vw;
+    
+    
+
+}
+
 .image-content{
     display:flex;
+    width: 100%;
     flex-direction: row;
+    justify-content: left;
+    margin-right: 2vw;
+    margin-left: 1.5vw ; 
+    
    
     
+    
+}
+
+.content-postbtn{
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+    width: 100%;
+
     
 }
 
@@ -68,7 +123,8 @@
 }
 
 .content{
-    max-width:70vw;
+    width:93%;
     text-align: left;
     font-family: "Courier New", Courier, monospace;
+    margin-right: 2vw;
 }
