@@ -4,22 +4,27 @@ import './App.css';
 import axios from 'axios'
 import Header from './components/header/header'
 import Inputs from './components/inputs/Input.js'
+import View from './View.js';
+
+
+
 
 class App extends Component{
   constructor() {
     super()
     this.state = {
-      arrOfPosts: []
+      arrOfPosts: [],
+      showPosts: true
     }
   }
 
   componentDidMount(){
-    console.log('hit');
+ 
     axios
     .get('/api/posts')
     .then(res => {
       this.setState({arrOfPosts: res.data})
-      console.log(this.state.arrOfPosts);
+      
     })
     .catch(err=> {console.log("server err", err) 
   })}
@@ -32,7 +37,6 @@ class App extends Component{
  
 
   createPost = (titleInput, imageInput, contentInput) => {
-    // console.log('hit2');
     axios
      .post('/api/posts', {
        title: titleInput,
@@ -41,7 +45,7 @@ class App extends Component{
      })
      .then( res => { 
         this.setState({arrOfPosts: res.data})
-        // console.log(this.state.arrOfPosts);
+       
        
      })
      .catch(err => console.log('err', err))
@@ -49,7 +53,7 @@ class App extends Component{
   }
 
   deletePost = id => {
-    // console.log('hit');
+   
   axios 
     .delete(`/api/posts/${id}`)
     .then( res => {
@@ -76,18 +80,88 @@ class App extends Component{
       })
       .catch(err => console.log('not able to search', err))
       console.log(this.state.arrOfPosts);
+
+      
   }
+
+
+  navigate = () => {
+      this.setState({
+        showPosts: !this.state.showPosts
+      })
+    } 
+
+    changeBtnName= () => {
+      if(this.state.showPosts){
+        return 'Admin'
+      }else{
+        return 'User'
+      }
+    }
+
+    setScrollbarTop(){
+      window.scrollTo(0,0)
+  }
+
   
+      
 
   render() {
     return (
     <div className="App">
-        <Header/>
-        <Inputs
+       
+        <Header
+        navigate={this.navigate}
+        changeBtnName={this.changeBtnName}
+        
+        />
+        
+        <div className="main-container">
+          {this.state.showPosts ? 
+            <View
+            handleChange = {this.handleChange}
+            setScrollbarTop = {this.setScrollbarTop}
+            />
+           : 
+        <div>
+            <Inputs
           createPost = {this.createPost}  
           searchPosts= {this.searchPosts}
           resetInputs= {this.resetInputs}
+         
         />
+        
+        <div className='posts-box'>
+       
+        <div className='posts'>
+        {this.state.arrOfPosts.map( post => {
+          return(
+            <Posts 
+              key= {post.id}
+              id = {post.id}
+              post = {post}
+              deletePost = {this.deletePost}
+              editPost = {this.editPost}
+            
+            />
+            
+          );
+        })
+        }
+        </div>
+        
+        </div> 
+          }
+          </div> 
+          }  
+        </div>
+          
+      
+        
+        
+        
+
+     
         
         <div className='posts-box'>
        

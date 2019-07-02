@@ -1,0 +1,11 @@
+.search-box{
+    height: 3%;
+    width: 10vw;
+    position: absolute;
+    top: 65vh;
+    right:1%;
+    border-radius: 15%;
+    background: rgb(218, 236, 218);
+    border: none;
+    font-family: 'Julius Sans One', sans-serif;
+}

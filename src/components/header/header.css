@@ -1,15 +1,11 @@
 
-
-
-
 .sticky-box{
     height: 60vh;
     width:100%;
-    
     display: flex;
     justify-content: space-around;
     align-items: flex-start;
-    background-color:  rgb(207, 195, 195);
+    background-color:   rgb(100, 90, 73);
 }
 
 
@@ -18,38 +14,45 @@
     height: 40vh;
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
     background-color: rgb(100, 90, 73);
     position:sticky;
-    top: 0rem;
+    top: 3rem;
+    
     
 }
 
 .title-box {
-    width:100vw;
+    width:100%;
     display: flex;
     justify-content: space-evenly;
-    
-   
     position:sticky;
     bottom:  0rem;
-    
-    right:4%;
+
 }
 
 .main-title{
     color:white;
     font-family: 'Julius Sans One', sans-serif;
-    font-stretch: narrower;
+    
     font-size:10vh
 }
 
 .logo{
     width: auto;
-    height: 30vh;
+    height: 40vh;
     position: relative;
     left: 3vw;
     border-radius: 10%;  
     
+}
+
+.admin-btn{
+    height: 10%;
+    background: rgb(218, 236, 218);
+    border-radius: 10%;
+    position: relative;
+    bottom:60%
+
 }

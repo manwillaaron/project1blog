@@ -28,7 +28,6 @@ export default class Inputs extends Component {
 
 
   resetInputs =() => { 
-    // let{titleInput,imageInput,contentInput,searchInput} = this.state
     this.setState({titleInput: ''})
     this.setState({imageInput: ''})
     this.setState({contentInput: ''})
@@ -97,7 +96,7 @@ render(){
                     }
                   }}
               
-                className='search-box'
+                className='search-box-admin'
                 placeholder= 'Search'>
                 </input>
             </div>   
