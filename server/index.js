@@ -1,14 +1,14 @@
-require('dotenv').config({ path: __dirname + '/../.env' })
+require('dotenv').config()
 const express = require('express')
 const pc = require('./postController')
-const { SERVER_PORT } = process.env
+
 
 const app = express()
 
 
 
 app.use(express.json())
-
+const { SERVER_PORT } = process.env
 app.get('/api/posts', pc.allPosts)
 app.get('/api/search', pc.searchPosts)
 app.post('/api/posts',pc.createPost)
