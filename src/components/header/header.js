@@ -16,8 +16,17 @@ const Header = props => (
       <div className="title-box">
         <text className="main-title">CODING IS COOL</text>
       </div>
+      {props.passwordFlip && (
+        <input
+          className="admin-pass-input"
+          name="password"
+          type="password"
+          value={props.password}
+          placeholder="password"
+        />
+      )}
       <button className="admin-btn" onClick={() => props.navigate()}>
-        {props.changeBtnName()}
+        {props.passwordFlip ? "Sumbit" : props.changeBtnName()}
       </button>
     </header>
   </div>

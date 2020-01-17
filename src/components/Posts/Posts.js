@@ -70,13 +70,13 @@ class posts extends Component {
           {!this.props.isAdmin && (
             <div>
               {editing ? (
-              <button className="button" onClick={this.SaveEditing}>
-                Save Changes
-              </button>
+                <button className="button" onClick={this.SaveEditing}>
+                  Save Changes
+                </button>
               ) : (
-              <button className="button" onClick={this.flipEditing}>
-                Edit
-              </button>
+                <button className="button" onClick={this.flipEditing}>
+                  Edit
+                </button>
               )}
               <button
                 className="button"
@@ -84,7 +84,6 @@ class posts extends Component {
               >
                 delete
               </button>
-              }
             </div>
           )}
         </div>

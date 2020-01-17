@@ -12,7 +12,9 @@ class App extends Component {
     this.state = {
       posts: [],
       showPosts: true,
-      searchTerm: ""
+      searchTerm: "",
+      password: "12345",
+      passwordFlip: false
     };
   }
 
@@ -70,9 +72,18 @@ class App extends Component {
   };
 
   navigate = () => {
-    this.setState({
-      showPosts: !this.state.showPosts
-    });
+    if (this.state.passwordFlip) {
+      if (this.state.password === "12345") {
+        this.setState({
+          showPosts: !this.state.showPosts,
+          passwordFlip: false 
+        });
+      } else {
+        alert("password incorrect");
+      }
+    } else {
+      this.setState({ passwordFlip: true });
+    }
   };
 
   changeBtnName = () => {
@@ -93,7 +104,11 @@ class App extends Component {
     );
     return (
       <div className="App">
-        <Header navigate={this.navigate} changeBtnName={this.changeBtnName} />
+        <Header
+          navigate={this.navigate}
+          changeBtnName={this.changeBtnName}
+          passwordFlip={this.state.passwordFlip}
+        />
 
         <div className="main-container">
           {this.state.showPosts ? (
@@ -103,7 +118,6 @@ class App extends Component {
               searchTerm={this.state.searchTerm}
               filteredArr={filteredArr}
               showPosts={this.state.showPosts}
-
             />
           ) : (
             <div>
@@ -111,7 +125,6 @@ class App extends Component {
                 createPost={this.createPost}
                 resetInputs={this.resetInputs}
                 handleChange={this.handleChange}
-                
               />
               <div className="posts-box">
                 <div className="posts">
