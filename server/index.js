@@ -8,7 +8,7 @@ const app = express()
 
 
 app.use(express.json())
-const { SERVER_PORT } = process.env
+const SERVER_PORT = 4321
 app.get('/api/posts', pc.allPosts)
 app.get('/api/search', pc.searchPosts)
 app.post('/api/posts',pc.createPost)
