@@ -1,8 +1,7 @@
 import React, { Component } from "react";
-
 import "./Posts.css";
 
-class posts extends Component {
+class Posts extends Component {
   constructor(props) {
     super();
     this.state = {
@@ -66,30 +65,10 @@ class posts extends Component {
             name="content"
           />
         ) : null}
-        <div className="buttons">
-          {!this.props.isAdmin && (
-            <div>
-              {editing ? (
-                <button className="button" onClick={this.SaveEditing}>
-                  Save Changes
-                </button>
-              ) : (
-                <button className="button" onClick={this.flipEditing}>
-                  Edit
-                </button>
-              )}
-              <button
-                className="button"
-                onClick={() => this.props.deletePost(this.props.id)}
-              >
-                delete
-              </button>
-            </div>
-          )}
-        </div>
+      
       </div>
     );
   }
 }
 
-export default posts;
+export default Posts;

@@ -1,5 +1,5 @@
 import React from "react";
-import "./header.css";
+import "./Header.css";
 
 const Header = props => (
   <div className="sticky-box">
@@ -14,7 +14,7 @@ const Header = props => (
         src="https://images.unsplash.com/photo-1496154704336-6c88a94a019a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"
       ></img>
       <div className="title-box">
-        <text className="main-title">CODING IS COOL</text>
+        <p className="main-title">Project-Blog</p>
       </div>
       {props.passwordFlip && (
         <input
@@ -26,7 +26,7 @@ const Header = props => (
         />
       )}
       <button className="admin-btn" onClick={() => props.navigate()}>
-        {props.passwordFlip ? "Sumbit" : props.changeBtnName()}
+        {/* {props.passwordFlip ? "Sumbit" : props.changeBtnName()} */}
       </button>
     </header>
   </div>
