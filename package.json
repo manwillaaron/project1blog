@@ -10,6 +10,7 @@
     "express": "^4.17.1",
     "express-session": "^1.17.0",
     "massive": "^6.1.4",
+    "path": "^0.12.7",
     "react": "^16.8.6",
     "react-admin": "^2.9.3",
     "react-dom": "^16.8.6",
@@ -46,5 +47,5 @@
       "server"
     ]
   },
-  "main": "./server/index.js"
+  "main": "server/index.js"
 }
